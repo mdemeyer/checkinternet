@@ -1,4 +1,9 @@
-# is the internet on fire status reports
+# checkinternet function
+#
+# Download internet status reports from istheinternetonfire.com
+# Copyright (C) 2015 De Meyer Maarten <de.meyer.maarten@gmail.com>
+#
+
 checkinternet() {
     local title='Internet status:'
     local cow='moose'
