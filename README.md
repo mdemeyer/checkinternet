@@ -10,6 +10,8 @@ Source the shell file from .bashrc (or similar file for your shell)
 Or add it to a global functions file
 `cat checkinternet.sh >> $HOME/.functions`
 
+You need to have cowsay installed to use the '-fun' argument.
+
 ## Usage
 ----------
 Run the function manually
