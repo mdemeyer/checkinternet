@@ -26,7 +26,8 @@ checkinternet() {
             | cowsay -W "$term_length" -f "$cow" -p
     else
         # Boring/Professional mode
-        printf "%s\n%s" "$title" "$INTERNETONFIRE"
+        printf "%s\n%s" "$title" "$INTERNETONFIRE" \
+            | fold -s -w "$term_length"
     fi
 }
 
