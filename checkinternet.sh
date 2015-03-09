@@ -1,6 +1,8 @@
 # checkinternet function
 #
 # Download internet status reports from istheinternetonfire.com
+# Original idea by reddit user jooiiee
+#
 # Copyright (C) 2015 De Meyer Maarten <de.meyer.maarten@gmail.com>
 #
 
