@@ -1,15 +1,20 @@
 # README
 ---------
 Short function to dowload internet status reports from istheinternetonfire.com
+
 Original idea by reddit user jooiiee
 
 ## Installation
 -----------
 Source the shell file from .bashrc (or similar file for your shell)
-`. checkinternet.sh`
+```
+. checkinternet.sh
+```
 
 Or add it to a global functions file
-`cat checkinternet.sh >> $HOME/.functions`
+```
+cat checkinternet.sh >> $HOME/.functions
+```
 
 You need to have cowsay installed to use the '-fun' argument.
 
