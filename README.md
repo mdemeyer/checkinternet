@@ -1,6 +1,7 @@
 # README
 ---------
 Short function to dowload internet status reports from istheinternetonfire.com
+Original idea by reddit user jooiiee
 
 ## Installation
 -----------
@@ -14,8 +15,11 @@ You need to have cowsay installed to use the '-fun' argument.
 
 ## Usage
 ----------
-Run the function manually
+Run the function manually:
 `checkinternet`
+
+Run with cowsay:
+`checkinternet -fun`
 
 Run when starting your first terminal session.
 ```
