@@ -13,23 +13,27 @@ checkinternet() {
 
     if [ -n "$COLUMNS" ] && [ "$COLUMNS" -le 80 ] ; then
         # Adapt the size of the message if the terminal supports it
-        term_length="$((COLUMNS-3))"
+        term_length="$((COLUMNS-5))"
     fi
 
     local raw=$(dig +short txt istheinternetonfire.com)
 
     # Chop quotes and add newline after sentence
     # export INTERNETONFIRE for use in .bashrc
-    export INTERNETONFIRE=$(echo "$raw" | sed -e 's/"//'g -e 's/\.\s/\.\n\n/'g)
+    export INTERNETONFIRE=$(echo "$raw" | sed \
+        -e 's/"//'g \
+        -e 's/\.\s/\.\n/'g \
+        -e 's/\\; /\n/'g)
+
+    printf "%s\n%s" "$title" "$INTERNETONFIRE" |
+        fold -s -w "$term_length" |
 
     if [ $# -ne 0 ] && [ "$1" = '-fun' ] ; then
         # paranoid moose for dramatic effect
-        printf "%s\n\n%s" "$title" "$INTERNETONFIRE" \
-            | cowsay -W "$term_length" -f "$cow" -p
+        cowsay -f "$cow" -p -n
     else
         # Boring/Professional mode
-        printf "%s\n%s" "$title" "$INTERNETONFIRE" \
-            | fold -s -w "$term_length"
+        cat
     fi
 }
 
