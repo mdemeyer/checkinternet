@@ -25,6 +25,10 @@ Run the function manually:
 
 Run with cowsay:
 `checkinternet -fun`
+Use '-fun' for the default moose or pipe to your prefered animal
+```
+checkinternet | cowsay -n -f bud-frogs
+```
 
 Run when starting your first terminal session.
 ```
